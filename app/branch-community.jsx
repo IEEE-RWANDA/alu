@@ -8,8 +8,8 @@ const groups = [
   { id: "faculty", label: "Faculty & support", roles: [
     { name: "Binusha Balachandran", role: "Institution department head", initials: "BB" },
     { name: "Martin Wairimu", role: "Student branch counselor", initials: "MW" },
-    { name: "Hubert Apana", role: "Endorsing faculty member", initials: "HA" },
-    { name: "Simeon Nsabiyumva", role: "Endorsing faculty member", initials: "SN" },
+    { name: "Hubert Apana", role: "Branch counselor", initials: "HA" },
+    { name: "Simeon Nsabiyumva", role: "Branch counselor", initials: "SN" },
   ] },
 ];
 
