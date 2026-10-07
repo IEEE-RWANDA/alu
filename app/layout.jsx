@@ -3,7 +3,7 @@ export const metadata = {
   metadataBase: new URL("https://alu.ieeerwanda.org"),
   title: "IEEE ALU Student Branch — Ideas into impact",
   description:
-    "Meet the newly created IEEE ALU Student Branch. A space to explore technology, share ideas, and build alongside other students.",
+    "Meet the IEEE ALU student community. Our student branch petition is pending IEEE approval. A space to explore technology, share ideas, and build alongside other students.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "IEEE ALU Student Branch — Ideas into impact",

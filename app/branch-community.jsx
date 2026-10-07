@@ -2,19 +2,24 @@
 
 import { useState } from "react";
 
-// Replace these placeholders with confirmed names and local image paths.
+// Faculty names and roles supplied from the branch petition; portraits are pending.
 const groups = [
-  { id: "students", label: "Student leaders", roles: ["Branch chair", "Vice chair", "Secretary", "Treasurer"] },
-  { id: "faculty", label: "Faculty & advisors", roles: ["Branch counselor", "Faculty advisor"] },
+  { id: "students", label: "Student leaders", roles: ["Branch chair", "Vice chair", "Secretary", "Treasurer"].map(role => ({ role })) },
+  { id: "faculty", label: "Faculty & support", roles: [
+    { name: "Binusha Balachandran", role: "Institution department head", initials: "BB" },
+    { name: "Martin Wairimu", role: "Student branch counselor", initials: "MW" },
+    { name: "Hubert Apana", role: "Endorsing faculty member", initials: "HA" },
+    { name: "Simeon Nsabiyumva", role: "Endorsing faculty member", initials: "SN" },
+  ] },
 ];
 
-function AvatarPlaceholder() {
+function AvatarPlaceholder({ initials }) {
   return (
     <div className="mx-auto flex size-28 items-center justify-center rounded-full bg-[#e8f0f4] text-[#8da9b9] sm:size-32" aria-hidden="true">
-      <svg viewBox="0 0 100 100" className="size-24" fill="currentColor">
+      {initials ? <span className="text-3xl font-semibold tracking-tight text-[var(--blue)]">{initials}</span> : <svg viewBox="0 0 100 100" className="size-24" fill="currentColor">
         <circle cx="50" cy="35" r="15" />
         <path d="M19 82c0-18 13-29 31-29s31 11 31 29z" />
-      </svg>
+      </svg>}
     </div>
   );
 }
@@ -34,9 +39,9 @@ export default function BranchCommunity({ section }) {
   return (
     <>
       {section === "people" && <section className="section border-b border-[var(--line)]" id="team" aria-labelledby="people-title">
-        <div className="eyebrow">OUR PEOPLE</div>
-        <h1 className="page-title" id="people-title">The people behind our branch.</h1>
-        <p className="mt-5 max-w-xl text-sm">Meet our student leaders and the faculty supporting the branch. The confirmed team will be introduced here soon.</p>
+        <div className="eyebrow">LEADERSHIP</div>
+        <h1 className="page-title" id="people-title">Branch leadership.</h1>
+        <p className="mt-5 max-w-xl text-sm">Meet the faculty supporting our student branch petition. Student leadership details will be announced here.</p>
         <div role="tablist" aria-label="Branch team" className="mt-9 flex gap-7 border-b border-[var(--line)]">
           {groups.map((group, index) => (
             <button key={group.id} id={`tab-${group.id}`} role="tab" aria-selected={active === index} aria-controls={`panel-${group.id}`} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={(event) => switchTab(event, index)} className={`border-b-2 bg-transparent pb-3 text-[13px] font-semibold ${active === index ? "border-[var(--blue)] text-[var(--blue)]" : "border-transparent text-[var(--muted)]"}`}>
@@ -47,15 +52,15 @@ export default function BranchCommunity({ section }) {
         {groups.map((group, index) => (
           <div key={group.id} id={`panel-${group.id}`} role="tabpanel" aria-labelledby={`tab-${group.id}`} hidden={active !== index} tabIndex={0}>
             <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-10 md:grid-cols-4">
-              {group.roles.map((role) => (
-                <article key={role} className="text-center">
-                  <AvatarPlaceholder />
-                  <h3 className="mt-5 !text-[18px]">{role}</h3>
-                  <p className="mt-2 text-xs">To be announced</p>
+              {group.roles.map((person, roleIndex) => (
+                <article key={`${group.id}-${roleIndex}`} className="text-center">
+                  <AvatarPlaceholder initials={person.initials} />
+                  <h3 className="mt-5 !text-[18px]">{person.name || person.role}</h3>
+                  <p className="mt-2 text-xs">{person.name ? person.role : "To be announced"}</p>
                 </article>
               ))}
             </div>
-            <p className="text-[11px]">Proposed role placeholders. Names, appointments, and portraits will be added once confirmed.</p>
+            <p className="text-[11px]">{group.id === "faculty" ? "All four have endorsed the student branch petition, which is pending IEEE approval. Portraits will be added when available." : "Proposed role placeholders. Names, appointments, and portraits will be added once confirmed."}</p>
           </div>
         ))}
       </section>}

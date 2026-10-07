@@ -52,3 +52,9 @@ Selected three photographs from IEEE Rwanda’s ALU Student Branch album at the 
 - Album: https://www.flickr.com/photos/ieeerwanda/albums/72177720335078644/
 
 Flickr’s camera dates conflict with the upload year; captions intentionally avoid assigning a specific event date or identifying people. Images use intrinsic dimensions to prevent layout shifts, with the hero loaded eagerly and supporting photos lazy-loaded.
+
+## Faculty petition roles
+
+Checked IEEE MGA's official formation policies through the in-app browser. Student branch petition endorsers are one institutional department head, one faculty counselor, and two faculty members. The counselor and two faculty endorsers must hold active IEEE Graduate Student Member grade or higher and teach in IEEE fields of interest. The department head need not hold IEEE membership but needs an IEEE web account. The petition requires 12 eligible student/graduate student member signatures and approval by the Region Director (or designee), Regional Student Activities Chair, and Section Chair. Chapter advisors are separate from the two branch faculty endorsers. Leadership placeholders reflect these distinctions; no names or formal appointments are inferred.
+
+Source: https://mga.ieee.org/volunteer-hub/geographic-unit-operations/formations-and-petitions#student

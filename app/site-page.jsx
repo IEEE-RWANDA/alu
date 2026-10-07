@@ -86,7 +86,7 @@ export default function SitePage({ view = "home" }) {
             ["home", "/", "Home"],
             ["events", "/events/", "Events"],
             ["chapters", "/chapters/", "Chapters"],
-            ["people", "/people/", "Our people"],
+            ["people", "/people/", "Leadership"],
           ].map(([key, href, label]) => (
             <a key={key} href={href} aria-current={view === key ? "page" : undefined}>{label}</a>
           ))}
@@ -152,13 +152,13 @@ export default function SitePage({ view = "home" }) {
           </div>
           <div className="about-copy">
             <p>
-              The IEEE ALU Student Branch is a new student community at African
+              The proposed IEEE ALU Student Branch is a student community at African
               Leadership University in Kigali. We’re here to make learning
               together, exchanging ideas, and finding collaborators part of
               campus life.
             </p>
             <p>
-              As we get started, you can help shape our activities—whatever your
+              Our student branch petition is pending IEEE approval. As we get started, you can help shape our activities—whatever your
               experience or area of study.
             </p>
           </div>
@@ -216,6 +216,47 @@ export default function SitePage({ view = "home" }) {
             Our programme is taking shape. Confirmed branch activities will be
             announced here.
           </p>
+        </section>
+
+        <section className="section" aria-labelledby="home-community-title">
+          <div className="section-heading flex justify-between items-end gap-[35px]">
+            <div><div className="eyebrow">LIFE IN THE COMMUNITY</div><h2 id="home-community-title">From conversations to possibilities.</h2></div>
+            <a className="text-link shrink-0" href="/events/">All events & photos</a>
+          </div>
+          <div className="mt-9 grid items-center gap-8 md:grid-cols-2 md:gap-14">
+            <figure className="m-0">
+              <img src="/assets/photos/alu-talk.jpg" alt="A speaker sharing ideas with students at ALU" width="1600" height="1280" loading="lazy" className="aspect-[4/3] w-full rounded object-cover" />
+              <figcaption className="mt-3 text-[10px] text-[var(--muted)]">On campus at ALU · <a className="underline underline-offset-4" href="https://www.flickr.com/photos/ieeerwanda/55453247049/">Photo: IEEE Rwanda</a></figcaption>
+            </figure>
+            <div>
+              <h3>A community already taking shape.</h3>
+              <p className="mt-4 text-sm leading-relaxed">IEEE gatherings at ALU have brought students and volunteers together to talk about research, innovation, and student opportunities. Our new branch builds on those conversations.</p>
+              <div className="mt-8 border-t border-[var(--line)] pt-6">
+                <p className="text-[10px] font-semibold tracking-wide !text-[var(--blue)]">14 NOVEMBER 2026 · COMMUNITY EVENT</p>
+                <h3 className="mt-3 !text-[22px]">Introduction to Research and IEEE Paper Writing</h3>
+                <p className="mt-3 text-xs">A workshop at CMU-Africa, organised by IES, MTT-S, and ComSoc Rwanda.</p>
+                <a className="text-link mt-5" href="/events/">Explore the event</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section bg-[var(--pale)]" aria-labelledby="home-chapters-title">
+          <div className="grid gap-9 md:grid-cols-[1fr_1.1fr] md:gap-16">
+            <div>
+              <div className="eyebrow">FIND YOUR INTEREST</div>
+              <h2 id="home-chapters-title">More ways to belong.</h2>
+              <p className="mt-5 max-w-md text-sm">We’re planning three student branch chapters, connecting students around shared technical interests.</p>
+              <a className="text-link mt-6" href="/chapters/">Meet the planned chapters</a>
+            </div>
+            <div className="border-t border-[#c5d9e4]">
+              {[["ComSoc", "Communications"], ["IES", "Industrial electronics"], ["IAS", "Industry applications"]].map(([acronym, name]) => (
+                <div key={acronym} className="flex items-baseline justify-between gap-5 border-b border-[#c5d9e4] py-5">
+                  <span className="text-sm font-semibold text-[var(--blue)]">{acronym}</span><span className="text-sm text-[var(--muted)]">{name}</span>
+                </div>
+              ))}
+              <p className="mt-4 text-[11px]">Planned chapters · establishment details to follow.</p>
+            </div>
+          </div>
         </section>
 </>}
 {view === "events" && <>
@@ -540,7 +581,7 @@ export default function SitePage({ view = "home" }) {
             <h3>Our branch</h3>
             <a href="/#about">About us</a>
             <a href="/events/">Events</a>
-            <a href="/people/">Leaders & faculty</a>
+            <a href="/people/">Leadership</a>
             <a href="/chapters/">Student branch chapters</a>
             <a href="/membership/">Membership</a>
             <a href="/brand/">Brand guidelines</a>
