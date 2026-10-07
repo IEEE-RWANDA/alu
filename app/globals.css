@@ -848,3 +848,8 @@
     margin: auto;
   }
 }
+
+@layer utilities {
+  .page-title { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; letter-spacing: -.045em; margin-bottom: 0; }
+  nav > a[aria-current="page"] { color: var(--blue); text-decoration: underline; text-underline-offset: 6px; }
+}

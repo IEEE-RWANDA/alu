@@ -22,7 +22,10 @@ The build exports the complete site to `out/`. Preview serves that folder at htt
 
 ## Editing
 
-- `app/page.jsx`: homepage content, React mobile navigation, and interest dialog.
+- `app/page.jsx`: compact homepage entry point.
+- `app/site-page.jsx`: shared navigation, page content, and interest dialog.
+- `app/events/`, `app/people/`, `app/chapters/`, `app/membership/`: dedicated content pages.
+- `app/branch-community.jsx`: leader/faculty tabs and planned chapters.
 - `app/globals.css`: shared typography and bespoke responsive styles, alongside Tailwind utilities in the components.
 - `app/layout.jsx`: metadata, canonical URL, and document layout.
 - `app/brand/page.jsx`: branch logo presentation at `/brand/`.

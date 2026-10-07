@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://alu.ieeerwanda.org/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://alu.ieeerwanda.org/</loc></url>
+<url><loc>https://alu.ieeerwanda.org/events/</loc></url>
+<url><loc>https://alu.ieeerwanda.org/chapters/</loc></url>
+<url><loc>https://alu.ieeerwanda.org/people/</loc></url>
+<url><loc>https://alu.ieeerwanda.org/membership/</loc></url>
+<url><loc>https://alu.ieeerwanda.org/brand/</loc></url>
+</urlset>
