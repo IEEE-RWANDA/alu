@@ -529,6 +529,7 @@ export default function Home() {
             <a href="#updates">Events</a>
             <a href="#team">Student leadership</a>
             <a href="#membership">Membership</a>
+            <a href="/brand/">Brand guidelines</a>
           </div>
           <div>
             <h3>The IEEE network</h3>
